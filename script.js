@@ -1,4 +1,4 @@
-let s = document.getElementById('container');
+let main = document.getElementById('container');
 
 function fetchData() {
     return fetch("https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json")
@@ -6,7 +6,7 @@ function fetchData() {
 }
 
 function renderProducts(products) {
-    s.innerHTML = ""; 
+    main.innerHTML = ""; 
 
     products.forEach(product => {
         let str = `
@@ -22,7 +22,7 @@ function renderProducts(products) {
                 </div>
             </div>
         `;
-        s.innerHTML += str;
+        main.innerHTML += str;
     });
 }
 
